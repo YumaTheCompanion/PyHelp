@@ -1,5 +1,5 @@
 # Explanation: This function reads a text file and replaces the content with the one you enter
-# Usage: python3 PyHelp/String/SearchCurDirForSubstring.py /any/dir/or/substring
+# Usage: python3 PyHelp/String/SearchCurDirForSubstring.py '/any/dir/or/substring'
 # Requirements: Python3 or Python2, grep
 # Source: ~
 
