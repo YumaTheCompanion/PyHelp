@@ -1,4 +1,4 @@
-# Explanation: This function reads a text file and replaces the content with the one you enter
+# Explanation: This function searches a substring in files and directories at or higher level then current one
 # Usage: python3 SearchCurDirForSubstring.py '/any/dir/or/substring'
 # Requirements: Python3 or Python2, grep
 # Source: ~
