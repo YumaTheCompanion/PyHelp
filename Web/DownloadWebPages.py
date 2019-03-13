@@ -9,4 +9,18 @@ import datetime
 
 argvLen = len(sys.argv)
 
-for filename in sys.argv[1:argvLen]:
+for website in sys.argv[1:argvLen]:
+	filename = website.split('/')
+	filenameText = filename[len(filename) - 1] + '.txt'
+	filenameErr = filename[len(filename) - 1] + '_err.txt'
+	
+	with open(filenameText, "wb") as out, open(filenameErr, "wb") as err:
+		out.write("Date: " + str(datetime.datetime.now()))
+		out.write("\r\n")
+		out.write("==========")
+		err.write("Date: " + str(datetime.datetime.now()))
+		err.write("\r\n")
+		err.write("==========")
+		p = subprocess.Popen(["lynx", website, "-dump", "-nolist", " >> ", filename, "2>&1"], stdout=out, stderr=err)
+		
+		p.communicate()[0]
