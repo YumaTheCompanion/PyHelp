@@ -1,5 +1,5 @@
 # Explanation: This function downloads the websites in text format
-# Usage: python3 PyHelp/Web/DownloadWebPages.py https://github.com/YumaTheCompanion
+# Usage: python3 DownloadWebPages.py https://github.com/YumaTheCompanion
 # Requirements: Python3 or Python2, lynx
 # Source: ~
 
