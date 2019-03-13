@@ -1,3 +1,8 @@
+# Explanation: This function reads a text file and replaces the content with the one you enter
+# Usage: python3 PyHelp/String/ReplaceSubstringInFile.py android_arm64-v8a.sh /home/dir/Android/Sdk/ndk-build /home/dir/Android/Sdk/ndkr11c
+# Requirements: Python3
+# Source: https://stackoverflow.com/a/20593644
+
 import fileinput
 import sys
  
