@@ -8,7 +8,7 @@ import subprocess
  
 substring = sys.argv[1]
 
-add_wildcard_to_substring = " '.*" + substring + ".*'"
+add_wildcard_to_substring = " '" + substring + "'"
 
 cmd = "grep -nrw . -e" + add_wildcard_to_substring
 
