@@ -14,13 +14,13 @@ for website in sys.argv[1:argvLen]:
 	filenameText = filename[len(filename) - 1] + '.txt'
 	filenameErr = filename[len(filename) - 1] + '_err.txt'
 	
-	with open(filenameText, "wb") as out, open(filenameErr, "wb") as err:
+	with open(filenameText, "w") as out, open(filenameErr, "w") as err:
 		out.write("Date: " + str(datetime.datetime.now()))
 		out.write("\r\n")
 		out.write("==========")
 		err.write("Date: " + str(datetime.datetime.now()))
 		err.write("\r\n")
 		err.write("==========")
-		p = subprocess.Popen(["lynx", website, "-dump", "-nolist", " >> ", filename, "2>&1"], stdout=out, stderr=err)
+		p = subprocess.Popen(["lynx", website, "-dump", "-nolist", " >> ", filenameText, "2>&1"], stdout=out, stderr=err)
 		
 		p.communicate()[0]
