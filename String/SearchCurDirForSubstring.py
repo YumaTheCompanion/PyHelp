@@ -10,7 +10,7 @@ substring = sys.argv[1]
 
 add_wildcard_to_substring = " '.*" + substring + ".*'"
 
-cmd = "grep -nrwi . -e" + add_wildcard_to_substring
+cmd = "grep -nrw . -e" + add_wildcard_to_substring
 
 p = subprocess.Popen(cmd,
                      shell=True)
